@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"USEnergy.Prices"}],"uuid":"5e8015e0f51f4eb0829607ef4111c8a6"}
