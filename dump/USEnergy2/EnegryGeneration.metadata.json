@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"USEnergy2.EnegryGeneration"}],"uuid":"8b94f8eec5154ef8bb2973c8ad8ecbce"}
