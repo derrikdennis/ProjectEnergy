@@ -81,5 +81,42 @@ def price_data():
     df.set_index("index",inplace =True)
     return df.to_json()
 
+@app.route("/user")
+def user():
+    total_df = pd.read_sql_query("SELECT * from 'End User Consumption'",con = engine)
+    total_df.set_index("index",inplace=True)
+    df=total_df.T
+    
+    df["Coal"] = list(map(lambda x: x[1:-2], df["Coal"].values))
+    df['Coal'] = pd.to_numeric(df.Coal)
+    df["Naturalgas"] = list(map(lambda x: x[1:-2], df["Naturalgas"].values))
+    df['Naturalgas'] = pd.to_numeric(df.Naturalgas)
+    df["Petroleum"] = list(map(lambda x: x[1:-2], df["Petroleum"].values))
+    df['Petroleum'] = pd.to_numeric(df.Petroleum)
+    df["Renewableenergy"] = list(map(lambda x: x[1:-2], df["Renewableenergy"].values))
+    df['Renewableenergy'] = pd.to_numeric(df.Renewableenergy)
+    df["Electricity"] = list(map(lambda x: x[1:-2], df["Electricity"].values))
+    df['Electricity'] = pd.to_numeric(df.Electricity)
+
+    return df.to_json()
+
+@app.route("/electricity")
+def electricity():
+    total_df = pd.read_sql_query("SELECT * from 'Electric Power Consumption'",con = engine)
+    total_df.set_index("index",inplace=True)
+    df=total_df.T
+    df["Coal"] = list(map(lambda x: x[1:-2], df["Coal"].values))
+    df['Coal'] = pd.to_numeric(df.Coal)
+    df["Naturalgas"] = list(map(lambda x: x[1:-2], df["Naturalgas"].values))
+    df['Naturalgas'] = pd.to_numeric(df.Naturalgas)
+    df["Petroleum"] = list(map(lambda x: x[1:-2], df["Petroleum"].values))
+    df['Petroleum'] = pd.to_numeric(df.Petroleum)
+    df["Renewableenergy"] = list(map(lambda x: x[1:-2], df["Renewableenergy"].values))
+    df['Renewableenergy'] = pd.to_numeric(df.Renewableenergy)
+    df["Nuclearpower"] = list(map(lambda x: x[1:-2], df["Nuclearpower"].values))
+    df['Nuclearpower'] = pd.to_numeric(df.Nuclearpower)
+
+    return df.to_json()
+
 if __name__ == "__main__":
     app.run(debug=True)
