@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>US Energy Data Home</title>
+        <title>US Energy Consumption</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
@@ -30,41 +30,16 @@
     </head>
 
     <body>
-        <header>
-            <p><center><img src="http://sites.psu.edu/passionhudock/wp-content/uploads/sites/1483/2013/02/43916-hi-ECO_100_Platform_Wind_Turbine_05.jpg" alt="" style="width:700px;height:300px;"></center> </p> 
-        </header> 
-            <aside>
-                <div class="sidebar">
-                    <ul class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="/energy">Energy Consumption</a></li>
-                        <li><a href="/electrical">Electrical Power Consumption</a></li>    
-                    </ul>
-                </div>
-            </aside>
-            <article>
-                <div class="intro">
-                    <h3> How have energy prices changed in the US and why? </h3>
-                    <h4>The purpose of this website is to look at energy consuption in the US and corresponding prices per state</h4>
-                </div>
-                <div class="map-info">        
-                    <p><center> <img src="http://www.offshorehelplaw.com/wp-content/uploads/2018/03/Oil-Rig-Injury.jpeg" alt="Picture by offshorehelplaw.com" style="width:500px;height:225px;"></center> </p>
-                </div>  
-                <p> The data we used has been scraped from www.eia.gov </p> 
-                <div class="row">
-                    <div class="col-md-2"> 
-                      <h5>States:</h5>
-                      <select id="selDataset" onchange="updatePlotly()"></select>   
-                    </div>
-                    <div class="col-md-5">
-                        <div id="myDiv"></div>
-                    </div>
-                </div>
-
-            </article>
-                            
+        <div class = "row">
+            <div class="col-md-10">
+                <div id="bar"></div>
+            </div>
         </div>
-
+        <div class = "row">
+            <div class="col-md-10">
+                <div id="elec"></div>
+            </div>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script type="text/javascript" src="../static/js/logic.js"></script>
