@@ -37,6 +37,10 @@ def index():
 def energy():
     return render_template("energy.html")
 
+@app.route("/energy2")
+def energy2():
+    return render_template("energy2.html")
+
 @app.route("/electrical")
 def electrical():
     return render_template("electrical.html")
@@ -78,4 +82,4 @@ def price_data():
     return df.to_json()
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
