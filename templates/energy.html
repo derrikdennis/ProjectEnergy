@@ -35,14 +35,21 @@
                 <div id="bar"></div>
             </div>
         </div>
-        <div class = "row">
-            <div class="col-md-10">
-                <div id="elec"></div>
+        <div class="row">
+            <div class="col-md-2"> 
+              <h5>States:</h5>
+              <select id="selDataset" onchange="updatePlotly()"></select>   
+            </div>
+            <div class="col-md-7">
+                <div id="myDiv"></div>
             </div>
         </div>
+
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script type="text/javascript" src="../static/js/logic.js"></script>
+        <script type="text/javascript" src="../static/js/generation_logic.js"></script>
 
        <div class="footer">
                 <div>

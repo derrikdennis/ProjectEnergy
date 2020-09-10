@@ -25,13 +25,12 @@ function init() {
      
      var data = [trace]
      
-     var layout = {title: "Average Yearly Energy Prices in AL",xaxis: {title: 'Year'},yaxis:{title:'Average Energy Price (KWH)'}};
+     var layout = {title: "Average Yearly Energy Prices in AL",xaxis: {title: 'Year'},yaxis:{title:'Average Energy Price ($/KWH)'}};
       
      Plotly.newPlot('myDiv', data,layout);   
     });
   }
 init();
-
 
 // Call updatePlotly() when a change takes place to the DOM
 d3.selectAll("#selDataset").on("change", updatePlotly);
@@ -56,11 +55,10 @@ function updatePlotly(){
   });
 };
 
+//Select User End Consumption Data
 d3.json('/user').then(data=>{
     energy_type = Object.keys(data)
     energy_values = Object.values(data)
-    console.log(energy_type)
-    console.log(energy_values)
     
     x_coal = Object.keys(energy_values[0])
     y_coal = Object.values(energy_values[0])
@@ -73,37 +71,11 @@ d3.json('/user').then(data=>{
     x_el = Object.keys(energy_values[4])
     y_el = Object.values(energy_values[4])
     
-    var trace1 = {
-    x: x_coal,
-    y: y_coal,
-    name: 'Coal',
-    type: 'bar'
-    };
-
-    var trace2 = {
-      x: x_gas,
-      y: y_gas,
-      name: 'Natural Gas',
-      type: 'bar'
-    };
-    var trace3 = {
-      x: x_pet,
-      y: y_pet,
-      name: 'Petroleum',
-      type: 'bar'
-    };
-     var trace4 = {
-      x: x_ren,
-      y: y_ren,
-      name: 'Renewable Energy',
-      type: 'bar'
-    };
-     var trace5 = {
-      x: x_el,
-      y: y_el,
-      name: 'Electricity',
-      type: 'bar'
-    };
+    var trace1 = {x: x_coal,y: y_coal,name: 'Coal',type: 'bar'};
+    var trace2 = {x: x_gas,y: y_gas,name: 'Natural Gas',type: 'bar'};
+    var trace3 = {x: x_pet,y: y_pet,name: 'Petroleum',type: 'bar'};
+    var trace4 = {x: x_ren,y: y_ren,name: 'Renewable Energy',type: 'bar'};
+    var trace5 = {x: x_el,y: y_el,name: 'Electricity',type: 'bar'};
 
     var data = [trace1, trace2,trace3, trace4, trace5];
 
