@@ -1,6 +1,6 @@
 const myMap = L.map("map", {
     center: [37.09, -95.71],
-    zoom: 5
+    zoom: 4
 });
 
 const streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -27,7 +27,7 @@ d3.json(link, function (data) {
             fillOpacity: 0.8
         },
         onEachFeature: function (features, layer) {
-            layer.bindPopup("State: " + features.properties.NAME + "<br> Price of Energy:<br>" + "$" + features.properties.VALUE);
+            layer.bindPopup("<h2>" + features.properties.STATE + "</h2>" + "<h3> Price of Energy: " + features.properties.PRICE + "</h3>");
         }
     }).addTo(myMap);
 
@@ -42,8 +42,8 @@ d3.json(link, function (data) {
         var labels = [];
 
 
-        div.innerHTML = "<h1>Price of Energy - 2019</h1>" +
-            '<div class="labels"><div class=\"min\">' + "$" + limits[0] + '</div> \
+        div.innerHTML = "<h2>Price of Energy - 2019</h2>" +
+            '<div class="labels"><div class="min">' + "$" + limits[0] + '</div> \
          <div class="max">' + "$" + limits[limits.length - 1] + '</div></div>';
 
         limits.forEach(function (limit, index) {
