@@ -12,10 +12,11 @@ const streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
     accessToken: API_KEY
 }).addTo(myMap);
 
-var link = "../static/data/gz_2010_us_040_00_20m.json";
+var link = "static/data/gz_2010_us_040_00_20m.json";
 
 
-d3.json(link, function (data) {
+d3.json(link).then(function (data) {
+    console.log(data)
     var geojson = L.choropleth(data, {
         valueProperty: "VALUE",
         scale: ["#FEFDFA", "#0957CC"],
@@ -27,7 +28,7 @@ d3.json(link, function (data) {
             fillOpacity: 0.8
         },
         onEachFeature: function (features, layer) {
-            layer.bindPopup("<h2>" + features.properties.STATE + "</h2>" + "<h3> Price of Energy: " + features.properties.PRICE + "</h3>");
+            layer.bindPopup("<h2>" + features.properties.STATE + "</h2>" + "<h3> Price of Energy: " + features.properties.VALUE + "¢</h3>");
         }
     }).addTo(myMap);
 
@@ -42,9 +43,9 @@ d3.json(link, function (data) {
         var labels = [];
 
 
-        div.innerHTML = "<h2>Price of Energy - 2019</h2>" +
-            '<div class="labels"><div class="min">' + "$" + limits[0] + '</div> \
-         <div class="max">' + "$" + limits[limits.length - 1] + '</div></div>';
+        div.innerHTML = "<h2>Price of Energy - 2019</h2>" + 'Cents per Kilowatt/Hour' +
+            '<div class="labels"><div class="min">' + limits[0] + '¢' + '</div> \
+         <div class="max">' + limits[limits.length - 1] + '¢' + '</div></div>';
 
         limits.forEach(function (limit, index) {
             labels.push('<li style="background-color: ' + colors[index] + '"></li>');

@@ -1,3 +1,4 @@
+//For the energy generation stacked bar graph
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
@@ -41,7 +42,7 @@ function init() {
      var trace10 = {x: x_val,y:y_bio,type: 'scatter',name: "Other Biomass"};
      var data = [trace1,trace2,trace3,trace4,trace5,trace6,trace7,trace8,trace9,trace10]
      
-     var layout = {title: "Average Yearly Energy Generation in AL",xaxis: {title: 'Year'},yaxis:{title:'Yearly Energy Generation (MMBTU)'}};
+     var layout = {title: "Average Yearly Energy Generation in AL",xaxis: {title: 'Year'},yaxis:{title:'Yearly Energy Generation (MMWH)'}};
       
      Plotly.newPlot('myDiv', data,layout);   
     });
