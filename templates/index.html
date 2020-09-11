@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>US Energy Data Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +17,8 @@
     <!-- MapBox JS -->
     <script src="https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js"></script>
 
-    <!-- Leaflet-Choropleth JavaScript -->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
 
     <!-- D3 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
@@ -35,7 +38,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
 
 <body>
@@ -61,7 +64,11 @@
             <h4>The purpose of this website is to look at energy consuption in the US and corresponding prices per state
             </h4>
         </div>
-        <div id="map"></div>
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <div id="map"></div>
+            </div>
+        </div>
         <p> The data we used has been scraped from www.eia.gov </p>
         <div class="row">
             <div class="col-md-2">
@@ -77,6 +84,7 @@
 
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="../static/js/logic.js"></script>
