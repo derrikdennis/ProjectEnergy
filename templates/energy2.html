@@ -10,7 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}" />
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div class="sidebar">
             <ul class="menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/energy">Energy Consumption</a></li>
+                <li><a href="/energy2">Energy Consumption</a></li>
                 <li><a href="/electrical">Electrical Power Consumption</a></li>
             </ul>
         </div>
@@ -42,7 +43,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{url_for('static',filename='js/energy.js')}}"></script>
+    <script src="{{url_for('static',filename='js/energy2.js')}}"></script>
 </body>
 
 </html>
