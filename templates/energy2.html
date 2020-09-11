@@ -14,15 +14,24 @@
 </head>
 
 <body>
-    <aside>
-        <div class="sidebar">
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/energy">Energy Consumption</a></li>
-                <li><a href="/electrical">Electrical Power Consumption</a></li>
-            </ul>
-        </div>
-    </aside>
+    <nav class="navbar navbar-expand-lg ">
+        <a  id ="nav_color1" class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <li class="nav-item dropdown">
+            <a id="nav_color1" class="nav-link dropdown-toggle navbar-brand"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Energy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="energy">Generation</a>
+              <a class="dropdown-item" href="energy2">Consumption</a>
+            </div>
+          </li>
+            <li class="navbar-brand">
+              <a id ="nav_color1"  class="nav-link" href="electrical">Electrical Power Consumption</a>
+            </li>
+    </nav>
 
     <select name="states" id="states" onChange="onChange(this.value)">
 
