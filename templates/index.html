@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>US Energy Data Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +17,8 @@
     <!-- MapBox JS -->
     <script src="https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js"></script>
 
-    <!-- Leaflet-Choropleth JavaScript -->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
 
     <!-- D3 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
@@ -35,40 +38,44 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
 
 <body>
-    <header>
-        <p>
-            <center><img
-                    src="http://sites.psu.edu/passionhudock/wp-content/uploads/sites/1483/2013/02/43916-hi-ECO_100_Platform_Wind_Turbine_05.jpg"
-                    alt="" style="width:700px;height:300px;"></center>
-        </p>
-    </header>
-    <aside>
-        <div class="sidebar">
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/energy">Energy Consumption</a></li>
-                <li><a href="/electrical">Electrical Power Consumption</a></li>
-            </ul>
-        </div>
-    </aside>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a  id ="nav_color1" class="navbar-brand" href="#">Home</a>
+        <li class="nav-item dropdown">
+            <a id="nav_color1" class="nav-link dropdown-toggle navbar-brand"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Energy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="energy">Generation</a>
+              <a class="dropdown-item" href="energy2">Consumption</a>
+            </div>
+        </li>
+
+            <li class="navbar-brand">
+              <a id ="nav_color1"  class="nav-link" href="electrical">Electrical Power Consumption</a>
+            </li>
+    </nav>
     <article>
         <div class="intro">
             <h3> How have energy prices changed in the US and why? </h3>
             <h4>The purpose of this website is to look at energy consuption in the US and corresponding prices per state
             </h4>
         </div>
-        <div id="map"></div>
-        <p> The data we used has been scraped from www.eia.gov </p>
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <div id="map"></div>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="col-md-2">
                 <h5>States:</h5>
                 <select id="selDataset" onchange="updatePlotly()"></select>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-12" align="center">
                 <div id="myDiv"></div>
             </div>
         </div>
@@ -76,17 +83,19 @@
     </article>
 
     </div>
-
+    
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="../static/js/logic.js"></script>
     <script type="text/javascript" src="../static/js/choropleth.js"></script>
     <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/maplogic.js"></script>
-
+    
     <div class="footer">
         <div>
-            <p>UT Austin Data Bootcamp 2020<br>Team Members: Ariana Monteiro, Brandon, Derrik, Darren, Jen, Sebastian
+            <p> The data we used has been scraped from www.eia.gov </p>
+            <p>UT Austin Data Bootcamp 2020<br>Team Members: Ariana Monteiro, Brandon Daniels, Derrik Dennis, Darren Lucca, Jen Trevino, Sebastian Galindo
             </p>
         </div>
     </div>
