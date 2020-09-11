@@ -1,5 +1,5 @@
 body {
-    background-color: #49B6E9;
+    background-color: #75cff0;
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 }
 
@@ -11,10 +11,23 @@ h4 {
     font-weight: bold;
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 }
+h5{
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+    color: #E0E0E2;
+    margin-left: 50%;
+    margin-top: 50%;
 
+}
+h6{
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+    color: #E0E0E2;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
 p,
 ul {
-    color: #DD01B8;
+    color: rgb(52, 161, 1);
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 }
 
@@ -38,7 +51,7 @@ thead {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #0957CC;
+    background-color: #091ccc;
 }
 
 .box {
@@ -56,11 +69,59 @@ thead {
 
 #map {
     height: 450px;
-    width: 1100px;
+    width: 85%;
     position: relative;
     outline: currentColor none medium;
+    margin-top: 10%;
 }
 
+#myDiv{
+    height: 450px;
+    width: 85%;
+    /* position: relative; */
+    /* margin-top: 10%; */
+}
+
+#gen{
+    height: 450px;
+    width: 85%;
+    /* position: relative; */
+    /* margin-top: 10%; */
+}
+
+#bar{
+    height: 450px;
+    width: 85%;
+    position: relative;
+    margin-top: 10%;
+}
+#selDataset{
+    margin-left: 50%;
+}
+#selDataset1{
+    margin-left: 50%;
+}
+#states{
+    position: relative;
+    margin-left: 50%;
+    
+    
+}
+
+#elec{
+    height: 450px;
+    width: 85%;
+    position: relative;
+    margin-top: 10%;
+
+}
+#graph {
+    height: 450px;
+    width: 85%;
+    position: relative;
+    
+    
+}
 .legend {
     color: #666;
     padding: 6px 8px;

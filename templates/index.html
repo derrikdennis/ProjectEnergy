@@ -42,11 +42,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <a  id ="nav_color1" class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <li class="nav-item dropdown">
             <a id="nav_color1" class="nav-link dropdown-toggle navbar-brand"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Energy
@@ -55,7 +52,7 @@
               <a class="dropdown-item" href="energy">Generation</a>
               <a class="dropdown-item" href="energy2">Consumption</a>
             </div>
-          </li>
+        </li>
 
             <li class="navbar-brand">
               <a id ="nav_color1"  class="nav-link" href="electrical">Electrical Power Consumption</a>
@@ -72,13 +69,13 @@
                 <div id="map"></div>
             </div>
         </div>
-        <p> The data we used has been scraped from www.eia.gov </p>
+        
         <div class="row">
             <div class="col-md-2">
                 <h5>States:</h5>
                 <select id="selDataset" onchange="updatePlotly()"></select>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-12" align="center">
                 <div id="myDiv"></div>
             </div>
         </div>
@@ -86,7 +83,7 @@
     </article>
 
     </div>
-
+    
     <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -94,10 +91,11 @@
     <script type="text/javascript" src="../static/js/choropleth.js"></script>
     <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/maplogic.js"></script>
-
+    
     <div class="footer">
         <div>
-            <p>UT Austin Data Bootcamp 2020<br>Team Members: Ariana Monteiro, Brandon, Derrik, Darren, Jen, Sebastian
+            <p> The data we used has been scraped from www.eia.gov </p>
+            <p>UT Austin Data Bootcamp 2020<br>Team Members: Ariana Monteiro, Brandon Daniels, Derrik Dennis, Darren Lucca, Jen Trevino, Sebastian Galindo
             </p>
         </div>
     </div>

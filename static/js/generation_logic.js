@@ -1,7 +1,7 @@
 //For the energy generation stacked bar graph
 function init() {
   // Grab a reference to the dropdown select element
-  var selector = d3.select("#selDataset");
+  var selector = d3.select("#selDataset1");
   
   // Use the list of states to populate the select options
   d3.json("/states").then((sampleNames) => {
@@ -44,16 +44,16 @@ function init() {
      
      var layout = {title: "Average Yearly Energy Generation in AL",xaxis: {title: 'Year'},yaxis:{title:'Yearly Energy Generation (MMWH)'}};
       
-     Plotly.newPlot('myDiv', data,layout);   
+     Plotly.newPlot('gen', data,layout);   
     });
   }
 init();
 
 // Call updatePlotly() when a change takes place to the DOM
-d3.selectAll("#selDataset").on("change", updatePlotly);
+d3.selectAll("#selDataset1").on("change", updatePlotly);
 // This function is called when a dropdown menu item is selected
 function updatePlotly(){
-    var dropdownMenu = d3.select("#selDataset");
+    var dropdownMenu = d3.select("#selDataset1");
     // Assign the value of the dropdown menu option to a variable
     var sample = String(dropdownMenu.property("value"));
     //Access sqlite database based on which state was selected from dropdown
@@ -73,12 +73,12 @@ function updatePlotly(){
      y_wood = Object.values(energy_data[8])
      y_bio = Object.values(energy_data[9])
       
-     Plotly.restyle("myDiv", "x", [x_val]);
-     Plotly.restyle("myDiv", "y", [y_nat,y_coal,y_pl,y_pc,y_og,y_nuc,y_hy,y_w,y_wood,y_bio]);
+     Plotly.restyle("gen", "x", [x_val]);
+     Plotly.restyle("gen", "y", [y_nat,y_coal,y_pl,y_pc,y_og,y_nuc,y_hy,y_w,y_wood,y_bio]);
         
       var update = {
         title: 'Average Yearly Energy Generation in '+sample // updates the title
       };
-      Plotly.relayout(myDiv, update)
+      Plotly.relayout(gen, update)
   });
 };
