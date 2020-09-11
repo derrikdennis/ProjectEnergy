@@ -12,7 +12,7 @@ const streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
     accessToken: API_KEY
 }).addTo(myMap);
 
-var link = "./static/data/gz_2010_us_040_00_20m.json";
+var link = "../static/data/gz_2010_us_040_00_20m.json";
 
 
 d3.json(link, function (data) {

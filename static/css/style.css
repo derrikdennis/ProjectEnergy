@@ -1,0 +1,95 @@
+body {
+    background-color: #49B6E9;
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+}
+
+h1,
+h2,
+h4 {
+    color: #DD0101;
+    text-align: center;
+    font-weight: bold;
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+}
+
+p,
+ul {
+    color: #DD01B8;
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+}
+
+a {
+    color: #E0E0E2;
+    font-size: 20px;
+}
+
+thead {
+    background-color: rgb(121, 247, 209);
+}
+
+/*this section of the CSS code will change Bootstrap eleemnts */
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0957CC;
+}
+
+.box {
+    background-color: #25BBA9;
+    padding: 5%;
+    border: 2px solid #7389AE;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+/* This Code will modify classes set by the team */
+#nav_color1 {
+    color: #FFFFFF;
+}
+
+#map {
+    height: 450px;
+    width: 1100px;
+    position: relative;
+    outline: currentColor none medium;
+}
+
+.legend {
+    color: #666;
+    padding: 6px 8px;
+    font: 12px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+.legend li {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+}
+
+.legend .min {
+    float: left;
+    padding-bottom: 5px;
+}
+
+.legend .max {
+    float: right;
+}
