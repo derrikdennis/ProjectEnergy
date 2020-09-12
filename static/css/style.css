@@ -162,3 +162,8 @@ thead {
 .legend .max {
     float: right;
 }
+
+.pad {
+    padding-left: 50px;
+    padding-right: 50px;
+}
