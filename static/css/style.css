@@ -6,9 +6,9 @@ body {
 h1,
 h2,
 h4 {
-    color: #DD0101;
-    text-align: center;
-    font-weight: bold;
+    color: #070000;
+    text-align: left;
+    /* font-weight: bold; */
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 }
 h5{
