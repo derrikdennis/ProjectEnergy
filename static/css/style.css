@@ -11,20 +11,23 @@ h4 {
     /* font-weight: bold; */
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 }
-h5{
+
+h5 {
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
     color: #E0E0E2;
     margin-left: 50%;
     margin-top: 50%;
 
 }
-h6{
+
+h6 {
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
     color: #E0E0E2;
     margin-left: 50%;
     margin-top: 20%;
 
 }
+
 p,
 ul {
     color: rgb(0, 0, 0);
@@ -33,7 +36,7 @@ ul {
 
 a {
     color: #E0E0E2;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 thead {
@@ -75,53 +78,58 @@ thead {
     margin-top: 10%;
 }
 
-#myDiv{
+#myDiv {
     height: 450px;
     width: 85%;
     /* position: relative; */
     /* margin-top: 10%; */
 }
 
-#gen{
+#gen {
     height: 450px;
     width: 85%;
     /* position: relative; */
     /* margin-top: 10%; */
 }
 
-#bar{
+#bar {
     height: 450px;
     width: 85%;
     position: relative;
     margin-top: 10%;
 }
-#selDataset{
+
+#selDataset {
     margin-left: 50%;
-}
-#selDataset1{
-    margin-left: 50%;
-}
-#states{
-    position: relative;
-    margin-left: 50%;
-    
-    
 }
 
-#elec{
+#selDataset1 {
+    margin-left: 50%;
+}
+
+#states {
+    position: relative;
+    margin-left: 50%;
+
+
+}
+
+#elec {
     height: 450px;
     width: 85%;
     position: relative;
     margin-top: 10%;
 
 }
+
 #graph {
     height: 450px;
     width: 85%;
     position: relative;
-    
-    
+
+
 }
+
 .legend {
     color: #666;
     padding: 6px 8px;
