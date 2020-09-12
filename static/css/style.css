@@ -14,17 +14,19 @@ h4 {
 
 h5 {
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
-    color: #E0E0E2;
-    margin-left: 50%;
+    color: rgb(3, 3, 3);
+    margin-left: 66%;
     margin-top: 50%;
+    font-size: medium;
 
 }
 
 h6 {
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
-    color: #E0E0E2;
+    color: rgb(10, 10, 10);
     margin-left: 50%;
     margin-top: 20%;
+    font-size: medium;
 
 }
 
@@ -88,7 +90,7 @@ thead {
 #gen {
     height: 450px;
     width: 85%;
-    /* position: relative; */
+    position: relative;
     /* margin-top: 10%; */
 }
 
@@ -96,20 +98,25 @@ thead {
     height: 450px;
     width: 85%;
     position: relative;
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 #selDataset {
+    position: relative;
     margin-left: 50%;
+    font-size: medium;
 }
 
 #selDataset1 {
-    margin-left: 50%;
+    margin-left: 66%;
+    font-size: medium;
+    position: relative;
 }
 
 #states {
-    position: relative;
     margin-left: 50%;
+    font-size: medium;
+    position: relative;
 
 
 }
@@ -118,7 +125,7 @@ thead {
     height: 450px;
     width: 85%;
     position: relative;
-    margin-top: 5%;
+    margin-top: 8%;
 
 }
 
