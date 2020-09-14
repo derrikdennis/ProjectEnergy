@@ -30,6 +30,14 @@ h6 {
 
 }
 
+h7 {
+    color: #070000;
+    text-align: center;
+    /* font-weight: bold; */
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
+    font-size: 15px;
+}
+
 p,
 ul {
     color: rgb(0, 0, 0);
@@ -173,4 +181,22 @@ thead {
 .pad {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.title {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.sum {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 15px;  
+    font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif; 
 }
