@@ -1,7 +1,6 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
       "type": "Feature",
       "properties": {
         "STATE": "Arizona",
@@ -41513,7 +41512,7 @@
       "properties": {
         "STATE": "Michigan",
         "NAME": "MI",
-        "CENSUSAREA": 11.7,
+        "VALUE": 11.7,
         "PRICE": "$11.70"
       },
       "geometry": {

@@ -40,6 +40,7 @@
     </script>
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <a id="nav_color1" class="navbar-brand" href="/">Home</a>
@@ -53,7 +54,7 @@
                 <a class="dropdown-item" href="energy2">Consumption</a>
             </div>
         </li>
-        <li >
+        <li>
             <a id="nav_color1" class="nav-link navbar-brand" href="electrical">Electrical Power Consumption</a>
         </li>
     </nav>
@@ -61,18 +62,28 @@
     <div class="title">
         <p>PROJECT ENERGY</p>
     </div>
-    
+
     <article>
         <!-- Add Project Summary -->
         <div class="col-md-12 sum" align="center">
-            <h7>PROJECT SUMMARY GOES HERE. </h7>
-            <!-- <p>How have energy prices changed in the US and why?</p> -->
-            <!-- <h4>The purpose of this website is to look at energy consuption in the US and corresponding prices per state
-            </h4> -->
+            <h7>Energy has always played an important role in defining the state of Texas. But how have other states
+                compared? For our group project, we wanted to answer this question by looking three key areas across all
+                states: the production of energy, the consumption of energy, and the prices each state paid for that
+                consumption.</h7>
+            <h7> The US Department of Energy has a vast repository of information on these topics which can be found at
+                https://www.eia.gov</h7>
+            <h7>Information was collected and placed sqlite database for use across all charts on this website.
+                Additional data was provided by using US Census geojson information on borders and boundaries.</h7>
         </div>
         <div class="row">
             <div class="col-md-12" align="center">
                 <div id="map"></div>
+            </div>
+            <div class="col-md-12 pad align=" center">
+                Using Leaflet.js with a choropleth overlay, we see the average price of energy per state in 2019. Lower
+                prices could be found not only in Louisiana but in the Upper Rockies. Higher prices are centered more in
+                the Northeast due to additional consumption of home heating oils during the winter months. Alaska and
+                Hawaii also had high average energy prices due to their location.
             </div>
         </div>
         <div class="row">
@@ -113,11 +124,11 @@
     </marquee>
     <div class="footer">
         <div class="pad">
-            <p>The data we used has been scraped from www.eia.gov </p> 
+            <p>The data we used has been scraped from www.eia.gov </p>
             <p>UT Austin Data Bootcamp 2020</p>
         </div>
     </div>
-    
+
 </body>
 
 </html>
