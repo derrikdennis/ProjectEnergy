@@ -27,7 +27,7 @@ function init() {
 
 function graph(state) {
     var xValue = Object.keys(consumptionData);
-
+    var xEl = Object.keys(electricConsumption);
     var yValue = [];
 
     for (const key in consumptionData) {
@@ -59,7 +59,7 @@ function graph(state) {
         }
     };
     var trace2 = {
-        x: xValue,
+        x: xEl,
         y: yValue2,
         name: 'Electrical',
         type: 'bar',
